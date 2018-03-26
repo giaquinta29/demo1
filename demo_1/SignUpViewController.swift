@@ -58,6 +58,9 @@ class SignUpViewController: UIViewController {
         alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
         self.present(alertController, animated: true, completion: nil)
     }
+    
+   
+    
     @IBAction func switchValueChange(_ sender: Any) {
         signIn.isEnabled = sw.isOn
     }
