@@ -55,7 +55,11 @@ class SignUpViewController: UIViewController {
     func success(){
         let alertController = UIAlertController(title: "Success", message: nil, preferredStyle: UIAlertControllerStyle.alert)
         
-        alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { (_) in
+            self.performSegue(withIdentifier: "toNextViewController", sender: nil)
+        }))
+        
+        
         self.present(alertController, animated: true, completion: nil)
     }
     
